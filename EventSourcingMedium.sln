@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcingMedium.API", "EventSourcingMedium.API\EventSourcingMedium.API.csproj", "{15FA1AEF-657F-46D1-B3C4-70E806D3E4F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15FA1AEF-657F-46D1-B3C4-70E806D3E4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FA1AEF-657F-46D1-B3C4-70E806D3E4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FA1AEF-657F-46D1-B3C4-70E806D3E4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FA1AEF-657F-46D1-B3C4-70E806D3E4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15668D14-AC23-4B74-82F9-C44FF7341E17}
+	EndGlobalSection
+EndGlobal
