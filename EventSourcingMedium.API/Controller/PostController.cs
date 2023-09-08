@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EventSourcingMedium.API.DTO;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventSourcingMedium.API.Controller
@@ -25,8 +26,9 @@ namespace EventSourcingMedium.API.Controller
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post()
+        public async Task<IActionResult> Post(CreatePostInformationDTO createPostInformationDTO)
         {
+            // map object
             return Ok();
         }
     }
