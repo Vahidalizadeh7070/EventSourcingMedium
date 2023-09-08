@@ -1,5 +1,6 @@
 using EventSourcingMedium.API.Models;
-using EventSourcingMedium.API.Services.PostInformationServices;
+using EventSourcingMedium.API.Services.PostInformationServices.CommandService;
+using EventSourcingMedium.API.Services.PostInformationServices.QueryService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,10 @@ var connectionString = builder.Configuration.GetConnectionString("DbConnection")
 builder.Services.AddDbContextPool<AppDbContext>(db => db.UseSqlServer(connectionString));
 
 // Register post information service
-builder.Services.AddScoped<IPostInformationService, PostInformationService>();
+builder.Services.AddScoped<IPostInformationCommandService, PostInformationCommandService>();
+builder.Services.AddScoped<IPostInformationQueryService, PostInformationQueryService>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
