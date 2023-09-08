@@ -1,6 +1,6 @@
 ﻿namespace EventSourcingMedium.API.DTO
 {
-    public class CreatePostInformationDTO
+    public record CreatePostInformationDTO
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Title { get; set; }

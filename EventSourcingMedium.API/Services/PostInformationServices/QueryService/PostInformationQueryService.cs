@@ -21,4 +21,4 @@ namespace EventSourcingMedium.API.Services.PostInformationServices.QueryService
         }
     }
 }
-}
+
