@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using EventSourcingMedium.API.CQRS.Command.Create;
 using EventSourcingMedium.API.CQRS.Query.GetAll;
+using EventSourcingMedium.API.CQRS.Query.GetById;
 using EventSourcingMedium.API.DTO;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -33,9 +34,14 @@ namespace EventSourcingMedium.API.Controllers
         }
 
         [HttpGet("GetPost")]
-        public IActionResult Get([FromQuery] string id)
+        public async Task<IActionResult> Get([FromQuery] string id)
         {
-            return Ok();
+            var res = await _mediator.Send(new GetByIdPostInformationRecord(id));
+            if(res is not null)
+            {
+                return StatusCode(StatusCodes.Status200OK, res);
+            }
+            return NotFound();
         }
 
         [HttpPost]
